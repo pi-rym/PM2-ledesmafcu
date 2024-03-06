@@ -3,12 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Valdi</title>
   </head>
   <body>
-    <h1>Proyecto de M2</h1>
-
+    <header>
+      <!-- logo -->
+      <div class="container">
+        <h2 class="logotipo">Valdi</h2>
+        <nav class="navBar">
+          <a href="./index.html" class="activo"> Home </a>
+          <a href="./movies.html"> Movies </a>
+          <a href="./about.html"> About Us </a>
+          <a href="./lastestNews.html"> My List </a>
+        </nav>
+      </div> 
+    </header>
+    <section class="recommendations">
+      <h1>Recomendaciones</h1>
+      <div id="movieCards" class="movie-cards">
+          <!-- Las cards de películas se generan aquí con JavaScript -->
+      </div>
+  </section>
     <script src="./scripts/tempData.js"></script>
     <script src="./scripts/index.js"></script>
+    <script src="https://kit.fontawesome.com/a1d7c52045.js" crossorigin="anonymous"></script>
   </body>
 </html>
