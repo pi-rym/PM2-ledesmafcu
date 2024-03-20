@@ -1,0 +1,86 @@
+:root {
+    --negro: black;
+    --fondo: #363946;
+    --gclaro: #696773;
+    --verdeclaro: #819595;
+    --amarelle: #B1B6A6;
+}
+
+html{
+    background-color: var(--gclaro);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 35px 0;
+    background-color: black;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logotipo {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--fondo);
+    font-size: 40px;
+}
+
+header nav a {
+    color: var(--fondo);
+    text-decoration: none;
+    margin-right: 20px; 
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header nav a:hover,
+header nav a.activo {
+    color: white;
+}
+
+body {
+    background-color: var(--gclaro);
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+    position: relative;
+    padding: 30px 0;
+    background-color: black;
+}
+
+footer p {
+    text-align: center
+}
+
+main {
+    background-color: var(--gclaro);
+    margin-bottom: 300px; /* Ajusta el valor según sea necesario */
+}
+
+/* Establece posición relativa para el footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Altura del footer */
+    background-color: black;
+    color: var(--gclaro);
+    text-align: center;
+    padding: 30px 0;
+}
+
+#btnid {
+    margin-top: 10px;
+    background-color: black;
+    border-color: black;
+}

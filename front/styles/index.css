@@ -1,6 +1,9 @@
 :root {
     --negro: black;
     --fondo: #363946;
+    --gclaro: #696773;
+    --verdeclaro: #819595;
+    --amarelle: #B1B6A6;
 }
 
 * {
@@ -9,24 +12,8 @@
     box-sizing: border-box;
 }
 
-.container {
-    margin: 0;
-    padding: 0;
-    /* background-color: #363946; */
-}
-
-body {
-    background-color: var(--fondo);
-    font-family: 'Open Sans', sans-serif;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-}
-
 header {
-    padding: 30px 0;
+    padding: 35px 0;
     background-color: black;
 }
 
@@ -56,10 +43,122 @@ header nav a.activo {
     color: white;
 }
 
-.movie-cards {
-    display: flex; /* Usa flexbox */
-    flex-wrap: nowrap; /* Evita que las cards se envuelvan a la siguiente línea */
-    justify-content: center; /* Centra horizontalmente las cards */
-    gap: 20px; /* Espacio entre las cards */
+body {
+    background-color: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
 }
 
+/* section {
+    padding: 0.5em 0;
+} */
+
+#slides {
+    margin-top: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#slides img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    margin-top: 0;
+    /* width: 99.2vw;
+    height: fit-content; */
+}
+
+#films {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+#films .movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20em;
+    padding-left: 1em;
+
+    flex: 1;
+    flex-basis: 300px;
+    flex-grow: 0;
+    height: 440px;
+    background: black;
+    border: 1px #363946;
+    box-shadow: 0px 4px 7px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    overflow: hidden;
+    position: relative;
+}
+
+#films .movie .divMovie {
+    border: var(--amarelle) solid 1px;
+    max-width: 300px;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--gclaro);
+    width: 100%;
+    height: 100%;
+    transition: all 0.7 ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+}
+
+#films .movie:hover .divMovie {
+    left: 0px;
+    transition: all 0.7s ease-in-out;
+    clip-path: circle(75%);
+}
+
+#films .movie:hover {
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    box-shadow: 0px 2px 3px black;
+    transform: scale(0.97);
+}
+
+#films .movie h3 {
+    padding-left: 0.3em;
+    color: var(--verdeclaro);
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+#films .movie p {
+    margin: 0.3em;
+    letter-spacing: 1px;
+    color: azure;
+}
+
+#films .movie:hover img {
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    transform: scale(1.6) rotate(20deg);
+    filter: blur(3px);
+}
+
+#films img {
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 0.5em;
+
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+
+footer {
+    color: white;
+    padding: 30px 0;
+    background-color: black;
+}
+
+footer p {
+    text-align: center
+}
